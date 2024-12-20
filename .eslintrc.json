@@ -6,24 +6,16 @@
     "plugin:tailwindcss/recommended",
     "prettier"
   ],
-  "plugins": [
-    "import"
-  ],
+  "plugins": ["import"],
   "rules": {
-    "tailwindcss/classnames-order": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-    "react/no-unescaped-entities": "off",
     "import/order": [
-      "off",
+      "error",
       {
         "groups": [
           "builtin",
           "external",
           "internal",
-          [
-            "parent",
-            "sibling"
-          ],
+          ["parent", "sibling"],
           "index",
           "object"
         ],
@@ -35,15 +27,20 @@
             "position": "after"
           }
         ],
-        "pathGroupsExcludedImportTypes": [
-          "builtin"
-        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
         }
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }
-

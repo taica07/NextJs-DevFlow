@@ -1,7 +1,6 @@
 "use client";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-// @ts-ignore
 import { ThemeProviderProps } from "next-themes/dist/types";
 import React from "react";
 
